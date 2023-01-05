@@ -1,0 +1,17 @@
+
+#spring boot oauth application with client and user credentials from the database
+server:
+  port: 8055
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/oauth2_demo?useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: oauth2_demo
+    password: oauth2_demo
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace
+debug: false

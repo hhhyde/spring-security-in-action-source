@@ -96,6 +96,7 @@
         <module>ssia-ch19-ex4</module>
         <module>ssia-ch19-ex5</module>
         <module>ssia-ch19-ex6</module>
+        <module>ssia-client-db</module>
     </modules>
 
     <dependencies>

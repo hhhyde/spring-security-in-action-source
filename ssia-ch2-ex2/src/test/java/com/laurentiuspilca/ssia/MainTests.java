@@ -23,6 +23,8 @@ public class MainTests {
     public void helloUnauthenticated() throws Exception {
         mvc.perform(get("/hello"))
                 .andExpect(status().isUnauthorized());
+
+        System.out.println(mvc.perform(get("/hello")).andReturn().getResponse().getContentAsString());
     }
 
     @Test
@@ -31,6 +33,7 @@ public class MainTests {
     public void helloAuthenticated() throws Exception {
         mvc.perform(get("/hello"))
                 .andExpect(status().isOk());
+        System.out.println(mvc.perform(get("/hello")).andReturn().getResponse().getContentAsString());
     }
 
 }
